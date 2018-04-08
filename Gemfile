@@ -12,6 +12,8 @@
  # #2
  group :development do
    gem 'sqlite3'
+    # Pry Gem
+   gem 'pry-rails'
  end
  
  group :development do
@@ -30,4 +32,5 @@
  gem 'turbolinks'
  # Boostrap & Sass
  gem 'bootstrap-sass'
+
  
