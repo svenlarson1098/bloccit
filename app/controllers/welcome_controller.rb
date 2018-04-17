@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
   def posts
   end
   
- # def contact
+  #def contact
   #end
   
   #def faq
