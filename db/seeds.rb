@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-require 'random_data'
+include RandomData
+#require 'random_data'
 
 #create posts
 50.times do
@@ -28,6 +28,15 @@ posts = Post.all
     )
 end
 
+#create questions
+100.times do
+  Question.create!(
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
+    resolved: false
+    )
+  end
+
 puts "#{Post.count}"
 Post.find_or_create_by(title: "Try and find me!", body: "Find my elusive unique post amongst these garbled jargon entries!")
 puts "#{Post.count}"
@@ -35,3 +44,4 @@ puts "#{Post.count}"
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Question.count} questions created"

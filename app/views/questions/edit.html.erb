@@ -1,0 +1,33 @@
+<h1>Edit Questions</h1>
+<p>Question not concise? C.I.U.(clean it up)</p>
+
+<div class ="row"> 
+  <div class="col-md-4">
+    <p> Guidelines for Questions:</p>
+    <ul>
+      <li> Do not answer questions with a question.</li>
+      <li> No trolling. (no matter how bad the question is).</li>
+      <li> Hecklers are tolerated, sans profanities.</li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @question do |f| %>
+    <div class="form-group">
+      
+      <%= f.label :title %>
+      
+      <%= f.text_field :title, class: 'form-control', placeholder: "Enter Question Subject" %>
+    </div>
+      <div class="form-group">
+         <%= f.label :body %>
+         <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Re-Enter Question Here" %>
+      </div>
+      <div class="form-group">
+        Mark as Resolved? <%= f.check_box :resolved %>
+       </div>
+      <div class="form-group">
+        <%= f.submit "Save", class: 'btn btn-success' %>
+       </div>
+     <% end %>
+   </div>
+</div>
