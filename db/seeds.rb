@@ -36,6 +36,15 @@ end
     resolved: false
     )
   end
+  
+  #create advertisements
+100.times do
+  Advertisement.create!(
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
+    price: rand(1...99)
+    )
+  end
 
 puts "#{Post.count}"
 Post.find_or_create_by(title: "Try and find me!", body: "Find my elusive unique post amongst these garbled jargon entries!")
@@ -45,3 +54,4 @@ puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
+puts "#{Advertisement.count} advertisements created"
