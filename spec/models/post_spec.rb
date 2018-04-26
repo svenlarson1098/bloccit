@@ -14,7 +14,7 @@ RSpec.describe Post, type: :model do
     it { is_expected.to belong_to(:topic) }
     
    describe "attributes" do
-      it "has title and body attribute" do
+      it "has a title and body attribute" do
         expect(post).to have_attributes(title: title, body: body)
     end
 end
