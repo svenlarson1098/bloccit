@@ -53,6 +53,16 @@ end
     price: rand(1...99)
     )
   end
+  
+  #create sponsored posts
+  20.times do
+    SponsoredPost.create!(
+      topic: topics.sample,
+      title: RandomData.random_sentence,
+      body: RandomData.random_paragraph,
+      price: rand(1..100)
+    )
+  end
 
 puts "#{Post.count}"
 Post.find_or_create_by(title: "Try and find me!", body: "Find my elusive unique post amongst these garbled jargon entries!")
@@ -64,3 +74,4 @@ puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Question.count} questions created"
 puts "#{Advertisement.count} advertisements created"
+puts "#{SponsoredPost.count} sponsored posts created"
