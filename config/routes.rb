@@ -13,6 +13,7 @@ end
 
   resources :questions
   resources :advertisements
+  resources :users, only: [:new, :create]
   #get 'welcome/contact'
   
   #get 'welcome/faq'
