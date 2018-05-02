@@ -23,6 +23,11 @@ describe "attributes" do
   it "should have name and email attributes" do
    expect(user).to have_attributes(name: "Bloccit User", email: "user@bloccit.com")
    end
+  it "is_expected to format the users name" do
+   user.name = "bloccit user"
+   user.save
+   expect(user.name).to eq "Bloccit User"
+  end
 end
  
  describe "invalid user" do
