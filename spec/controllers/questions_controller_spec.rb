@@ -119,9 +119,11 @@ describe "DELETE destroy" do
       count = Question.where({id: my_question.id}).size
       expect(count).to eq 0
     end
+
     it "redirects to question index" do
       delete :destroy, {id: my_question.id}
       expect(response).to redirect_to question_path
+
     end
 end
 end

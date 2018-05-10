@@ -21,7 +21,7 @@
         <br>
         <%= form_group_tag(@user.errors[:email]) do %>
           <%= f.label :email %><br>
-          <%= f.email_field :email, autofocus: true, class: 'form_control', placeholder: "Enter Email" %>
+          <%= f.email_field :email, class: 'form_control', placeholder: "Enter Email" %>
         <% end %>
         <br>
         <%= form_group_tag(@user.errors[:password]) do %>
