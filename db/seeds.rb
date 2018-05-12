@@ -20,7 +20,7 @@ users = User.all
 
 
 
-15.times do
+10.times do
   Topic.create!(
     name:         RandomData.random_sentence,
     description:  RandomData.random_paragraph
@@ -50,7 +50,7 @@ posts = Post.all
 end
 
 #create questions
-100.times do
+10.times do
   Question.create!(
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph,
@@ -59,7 +59,7 @@ end
   end
   
   #create advertisements
-100.times do
+10.times do
   Advertisement.create!(
     title: RandomData.random_sentence,
     body: RandomData.random_paragraph,
@@ -76,14 +76,27 @@ end
       price: rand(1..100)
     )
   end
-  
+=begin  
   user = User.first
     user.update_attributes!(
       name: 'Svucker',
       email: 'svucker@gmail.com', 
       password: 'helloworld'
       )
-
+=end 
+#create an admin user
+  admin = User.create!(
+    name:     'Admin User',
+    email:    'admin@example.com',
+    password: 'helloworld',
+    role:     'admin'
+  )
+#create a member
+  member = User.create!(
+    name:     'Member User',
+    email:    'member@example.com',
+    password: 'helloworld'
+    )
 
 puts "#{Post.count}"
 Post.find_or_create_by(title: "Try and find me!", body: "Find my elusive unique post amongst these garbled jargon entries!")
