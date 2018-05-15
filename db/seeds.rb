@@ -97,6 +97,14 @@ end
     email:    'member@example.com',
     password: 'helloworld'
     )
+    
+#create a moderator
+  moderator = User.create!(
+    name:     'Moderator',
+    email:    'moderator@example.com',
+    password: 'helloworld',
+    role:      'moderator'
+    )
 
 puts "#{Post.count}"
 Post.find_or_create_by(title: "Try and find me!", body: "Find my elusive unique post amongst these garbled jargon entries!")
