@@ -370,7 +370,7 @@ RSpec.describe PostsController, type: :controller do
         expect(response).to redirect_to my_topic
       end
     end
-    
+#****MODERATOR SPECS******    
   context "moderator doing CRUD on a post they don't own" do
     before do
       create_session(moderator)

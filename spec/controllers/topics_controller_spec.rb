@@ -273,7 +273,7 @@ RSpec.describe TopicsController, type: :controller do
       end
     end
   end
-#MODERATOR USER 
+#******MODERATOR USER******* 
   context "moderator user" do
     before do
       user = User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "helloworld", role: :moderator)
