@@ -23,5 +23,6 @@ module Workspace
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.autoload_paths << File.join(config.root, "lib")
+    config.action_mailer.default_url_options = { :host => 'bloccit-svenlarson1098.c9users.io' }
   end
 end
