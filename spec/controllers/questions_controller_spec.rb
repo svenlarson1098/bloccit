@@ -120,9 +120,9 @@ describe "DELETE destroy" do
       expect(count).to eq 0
     end
 
-    it "redirects to question index" do
+    it "redirects to question path" do
       delete :destroy, {id: my_question.id}
-      expect(response).to redirect_to question_path
+      expect(response).to redirect_to questions_path
 
     end
 end

@@ -21,13 +21,13 @@ end
 
   resources :questions
   resources :advertisements
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create, :destroy]
   post 'users/confirm' => 'users#confirm'
   
   #get 'welcome/contact'
   
-  #get 'welcome/faq'
+  get 'welcome/faq'
   
   get 'about' => 'welcome#about'
   
