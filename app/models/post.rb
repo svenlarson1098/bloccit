@@ -3,7 +3,6 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  
   has_many :votes, dependent: :destroy
   
   after_create :create_vote

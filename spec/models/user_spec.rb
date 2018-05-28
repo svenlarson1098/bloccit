@@ -121,7 +121,6 @@ describe "#favorite_for(post)" do
     favorite = user.favorites.where(post: @post).create
     expect(user.favorite_for(@post)).to eq(favorite)
 end
-#=end
 end
 
 describe ".avatar_url" do

@@ -7,7 +7,7 @@
   <body>
     <h1> New comment to "<%= @post.title %>"</h1>
     <small>
-      By: <% @comment.user.name %>
+      By: <%= @comment.user.name %>
     </small>
     <p>
       <%= @comment.body %>
