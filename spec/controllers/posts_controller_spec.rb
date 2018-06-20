@@ -9,7 +9,7 @@ RSpec.describe PostsController, type: :controller do
   let(:my_post) { create(:post, topic: my_topic, user: my_user) }
   let(:moderator) { User.create!(name: RandomData.random_name, email: RandomData.random_email, password: "helloworld", role: :moderator) }
   
-  context "guest" do
+  context "user" do
     describe "GET show" do
       it "returns http success" do
         get :show, topic_id: my_topic.id, id: my_post.id
